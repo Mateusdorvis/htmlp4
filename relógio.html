@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="icon"
+        href="https://png.pngtree.com/png-clipart/20190705/original/pngtree-alarm-clock-vector-eps-png-image_4185619.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Relogio.js"></script>
+    <title>Relógio</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        background-attachment: fixed;
+    }
+#home{
+    width: 44px;
+    height: 44px;
+}
+    .relogio {
+        width: 500px;
+        height: 500px;
+        border-radius: 500px;
+        background-color: #0000009b;
+        font-size: 5rem;
+        padding-top: 200px;
+        text-align: center;
+        color: white;
+        animation: sair 2s infinite;
+    }
+
+    #h1 {
+        font-size: 8rem;
+
+    }
+
+    h1 {
+        text-align: center;
+        padding: 5px;
+    }
+
+    body {
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .body {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        width: 100vh;
+        height: 100vh;
+    }
+
+    @media screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:portrait) {
+
+        body,
+        .divfooter {
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-device-width: 320px) and (max-device-width:480px) and (orientation:portrait) {
+        .body {
+            height: 100vh;
+            width: 500px;
+        }
+
+        .relogio {
+            background: none;
+            font-size: 4rem;
+            padding-top: 200px;
+            text-align: center;
+        }
+
+        #h1 {
+            font-size: 4rem;
+        }
+
+        body,
+        .divfooter {
+            display: inline-block;
+        }
+
+        .divfooter {
+            padding: 60px;
+        }
+    }
+
+    @media screen and (min-device-width:769px) and (max-device-width:1024px)and (min-device-height:1280px) and (max-device-height:1925px) and (orientation:landscape){
+
+        body,
+        .divfooter {
+            display: inline-block;
+        }
+    }
+</style>
+
+<body id="corpo">
+    <h1 id="h1">Relógio</h1>
+    <div class="body">
+        <div class="relogio">
+            <img src="#" id="image">
+        </div>
+    </div>
+    <script>
+        var img = document.getElementById('image')
+
+        function relogio() {
+
+            var body = document.getElementById("corpo")
+
+            const espacoRelogio = document.querySelector(".relogio");
+            const horaAgora = new Date();
+
+            const horas = horaAgora.getHours();
+
+            const minutos = horaAgora.getMinutes();
+            const segundos = horaAgora.getSeconds();
+
+            const formatoHora = horas.toString().padStart(2, "0");
+            //const formatoHora = 13
+
+            const formatoMinutos = minutos.toString().padStart(2, "0");
+
+            const formatoSegundos = segundos.toString().padStart(2, "0");
+
+            document.body.style.backgroundSize = 'Cover'
+
+
+            espacoRelogio.textContent = `${formatoHora}:${formatoMinutos}:${formatoSegundos}`;
+
+
+
+            if (formatoHora >= 06 && formatoHora < 12) {
+                document.body.style.backgroundImage = 'url(https://wallpapercave.com/wp/wp12067790.jpg)';
+            }
+            else if (formatoHora >= 12 && formatoHora < 18) {
+                document.body.style.backgroundImage = 'url(https://wallpapercave.com/wp/wp2214690.jpg)';
+
+
+                img.src = 'https://cdn-icons-png.flaticon.com/512/6543/6543593.png'
+            }
+
+            else {
+                document.body.style.backgroundImage = 'url(https://wallpapercave.com/wp/wp7901885.jpg)';
+
+                img.src = 'https://cdn-icons-png.flaticon.com/512/1146/1146258.png'
+
+            }
+        }
+
+        setInterval(relogio, 1000);
+    </script>
+  <footer>
+    <div class="divfooter">
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="tabuda.html">Tabuda</a></li>
+            <li><a href="signos.html">Signos</a></li>
+            <li><a href="flexgrid.html">Flex e grid</a></li>
+            <li><a href="carrossel.html">Carrossel</a></li>
+            <li><a href="main.html">Menu</a></li>
+            <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+          
+        </div>
+
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="imc.html">IMC</a></li>
+            <li><a href="landingpage.html">Landing Page</a></li>
+            <li><a href="homepage.html">home page</a></li>
+            <li><a href="cidade.html">álbum de fotos</a></li>
+            <li><a href="soma.html">Soma</a></li>
+        </div>
+        <div class="logo">
+            <h1 style="color: white; text-transform: uppercase;"><img
+                    src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" id="home"
+                    alt="">Mateus</h1>
+            <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+            <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+            <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                    src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+            <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+        </div>
+    </div>
+    <br><br>
+    <div class="copy">
+        <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+    </div>
+</footer>
+</body>
+
+</html>

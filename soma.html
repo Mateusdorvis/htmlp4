@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma / DOM</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(45deg, #770021, #4f2b38);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+    }
+
+
+    @font-face {
+        font-family: 'Right-Chalk';
+        src: url(Right\ Chalk.ttf);
+    }
+
+    .container {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #home {
+        width: 44px;
+        height: 44px;
+    }
+
+    h1 {
+        animation: change-color-word 15s infinite;
+        text-transform: uppercase;
+
+    }
+
+    .container h1 {
+        font-family: 'Right-Chalk';
+    }
+
+    @keyframes change-color-word {
+        5% {
+            color: #f5f552;
+        }
+
+        10% {
+            color: #fe64d2;
+        }
+
+        70% {
+            color: #8ae367;
+        }
+    }
+
+    @media screen and (min-device-width:320px) and (max-device-width:480px) and (orientation:portrait) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 90px;
+            height:80vh;
+
+        }
+
+        header {
+            padding: 80px;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:portrait) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 90px;
+            height: 60vh;
+
+        }
+
+        header {
+            padding: 80px;
+        }
+
+               .divfooter {
+            display: inline-block;
+        }
+
+    }
+
+    @media screen and (min-width:2560px) and (max-width:4000px) {
+       
+       .upp h1,#resp,#valor1, #valor2 {
+            font-size: 10rem;
+        }
+        .container{
+          height: 100vh;
+          color:black;
+        }
+        input, button{
+            width:500px;
+            height:200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="upp">
+            <h1>Soma usando DOM</h1>
+
+            <input type="number" name="valor1" id="valor1"> +
+            <input type="number" name="valor2" id="valor2">
+            <input type="button" value="=" onclick="soma()">
+
+
+            <div id="resp">resposta</div>
+        </div>
+    </div>
+
+    <script>
+        function soma() {
+            var v1 = window.document.getElementById('valor1');
+            var v2 = window.document.querySelector('input#valor2');
+            var resp = window.document.getElementById('resp');
+
+
+            var n1 = Number(v1.value);
+            var n2 = Number(v2.value);//number tem que ficar em maiúscula
+            var resultado = n1 + n2;
+
+            resp.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${resultado}.`
+        }
+    </script>
+    <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="signos.html">Signos</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="landingpage.html">Landing Page</a></li>
+                <li><a href="homepage.html">home page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" id="home" alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img
+                        src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img
+                        src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img
+                        src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

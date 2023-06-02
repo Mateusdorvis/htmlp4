@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="icon" href="imagem3.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paralax</title>
+</head>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-size: cover;
+ }
+
+ .conteudo{
+    position: absolute;
+    width: 80%;
+    top: 25%;
+    padding: 20px;
+    background-color: #fcfdff;
+    color: #000000;
+    box-shadow:  3px 3px 3px;
+    font-family: arial;
+    border-radius: 20px;
+
+}
+
+.fundo1::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/11395.jpg);
+}
+
+.fundo2::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/10979.jpg)
+}
+
+.fundo3::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/10320.jpg)
+}
+.fundo4::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/3527.jpg)
+}
+.fundo5::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/10476.jpg)
+}
+.fundo6::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/9678.jpg)
+}
+.fundo7::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/10877.jpg)
+}
+.fundo8::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/1834.jpg);
+}
+.fundo9::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/8973.jpg)
+}
+.fundo10::before{
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/6703.jpg)
+}
+
+.sessao::before{
+    content: " " ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+}
+
+
+.sessao{
+    margin: 50px;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    transform-style: inherit ;
+}
+
+#home{
+    width: 44px;
+    height: 44px;
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px; /* distancia entre os dois planos*/
+    transform-style: preserve-3d; /* indicar os elementos filhos */
+
+}
+
+
+h1{
+    color: #fff8d4;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 100%;
+   
+}
+
+
+.conteudo-texto{
+    position: absolute;
+    width: 80%;
+    top: 25%;
+    padding: 20px;
+    background-color: #fff8d4;
+    color: #000000;
+    box-shadow:  3px 3px 3px;
+    font-family: arial;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+}
+
+
+.conteudo-texto:hover{
+    background-color: hsl(50, 93%, 53%);
+}
+@media screen and (min-width:320px) and (max-width:768px) {
+    .divfooter{
+        display: inline-block;
+    }
+}
+
+</style>
+<body>
+    <h1>Paisagens naturais bonitas.</h1>
+    <main class="wrapper">
+        <section class="sessao fundo1">
+            <p class="conteudo">
+                Paisagem é uma categoria de análise da Geografia que nos ajuda no estudo e compreensão do espaço a partir de um ponto de vista específico, como também, a paisagem é definida como tudo aquilo que podemos identificar e interpretar através dos nossos sentidos (visão, audição, olfacto, tacto e paladar), além disso,as paisagens mudam ao longo do tempo, podendo nelas coexistir elementos materiais de diferentes épocas.
+               </p>
+        </section>
+
+        <section class="sessao fundo2">
+            <p class="conteudo-texto">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/421.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/421.jpg" alt="">
+                </a>Esta paisagem ao lado fica na índia,parece que esta paisagem foi feito com photoshop, mas não, existe de fato esta paisagem.</p>
+        </section>
+
+        <section class="sessao fundo3">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/9864.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/9864.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo4">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/10992.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/10992.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo5">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/1265.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/1265.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo6">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/7798.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/7798.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo7">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/1037.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/1037.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo8">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/4074.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/4074.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo9">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/8974.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/8974.jpg" alt="">
+            </p>
+        </section>
+        <section class="sessao fundo10">
+            <p class="conteudo">
+                <a href="https://4kwallpapers.com/images/walls/thumbs_3t/5842.jpg">
+                    <img src="https://4kwallpapers.com/images/walls/thumbs_3t/5842.jpg" alt="">
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="signos.html">Signos</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+              
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="landingpage.html">Landing Page</a></li>
+                <li><a href="homepage.html">home page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+                <li><a href="soma.html">Soma</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" id="home"
+                        alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

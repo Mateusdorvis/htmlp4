@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <title>Índice de Massa Corporal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMC</title>
+
+</head>
+<style>
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    body {
+        background-image: url(https://images.alphacoders.com/522/522386.jpg);
+        background-size: cover;
+        text-align: center;
+        font-family: 'BebasNeue-Regular';
+
+    }
+
+    header {
+        margin-bottom: 10%;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.718);
+    }
+
+    .imc {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.676);
+        color: white;
+        border-radius: 30px;
+        padding: 40px;
+    }
+
+    input {
+        border-radius: 20px;
+    }
+
+    span {
+        color: #e6b33d;
+        font-weight: 600;
+    }
+
+    main {
+        height: 50vh;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+        border-radius: 100px;
+        margin: 12px;
+        background-color: red;
+        font-family: 'BebasNeue-Regular' ;
+       font-weight: bold;
+        color: white;
+    }
+
+    @font-face {
+        font-family: 'BebasNeue-Regular';
+        src: url(BebasNeue-Regular.ttf);
+    }
+
+    @media screen and (min-width:320px) and (max-width:480px) {
+        body{
+            background-image: linear-gradient(to right, #b88000, #d56f00);
+            background-size: cover;
+        }
+        header{
+            color: white;
+        }
+        main {
+            height: 100vh;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-width:481px) and (max-width:768px) {
+
+        body{
+            background-image: linear-gradient(to right, #ff9784, #c09491, #3d1c33);
+            
+        }
+        header{
+            color: white;
+        }
+        .divfooter {
+            display: inline-block;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <h1>IMC - Índice de Massa Corporal</h1>
+    </header>
+    <main>
+        <div class="imc">
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" maxlength="5">
+            <br>
+
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura">
+            <br>
+
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <br>
+            <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+        </div>
+    </main>
+    <script>
+        function calcularIMC() {
+            const peso = document.getElementById("peso").value;
+            const altura = document.getElementById("altura").value;
+            const imc = peso / (altura ** 2);
+            document.getElementById("resultado").textContent = imc.toFixed(2);
+        }
+
+        let tituloDinamico = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Volteeeee;"
+        })
+        window.addEventListener("focus", () => {
+            document.title = tituloDinamico
+        })
+    </script>
+<footer>
+    <div class="divfooter">
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="tabuda.html">Tabuda</a></li>
+            <li><a href="relógio.html">Relógio</a></li>
+            <li><a href="signos.html">Signos</a></li>
+            <li><a href="flexgrid.html">Flex e grid</a></li>
+            <li><a href="carrossel.html">Carrossel</a></li>
+            <li><a href="main.html">Menu</a></li>
+            <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+          
+        </div>
+
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="landingpage.html">Landing Page</a></li>
+            <li><a href="homepage.html">home page</a></li>
+            <li><a href="cidade.html">álbum de fotos</a></li>
+            <li><a href="soma.html">Soma</a></li>
+            <li><a href="parallax.html">Parallax</a></li>
+        </div>
+        <div class="logo">
+            <h1 style="color: white; text-transform: uppercase;"><img
+                    src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                    alt="">Mateus</h1>
+            <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+            <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+            <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                    src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+            <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+        </div>
+    </div>
+    <br><br>
+    <div class="copy">
+        <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+    </div>
+</footer>
+</body>
+
+</html>

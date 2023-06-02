@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt br">
+
+<head>
+   <link rel="stylesheet" href="geral.css">
+   <link rel="icon" href="img/imagem10.png">
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie-edge">
+   <meta name="viewport" content="width=device-width,initial-sacle=1.0">
+   <title>Fotos das cidades</title>
+   <script src="https://cdn.gtranslate.net/widgets/latest/popup.js" defer></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+@import url('https://fonts.cdnfonts.com/css/silverstone-sans');
+@import url(' https://fonts.cdnfonts.com/css/gameovercre ');
+body {
+    background-color: rgb(0, 0, 0);
+   
+
+}
+
+.div-header h1 {
+    padding: 10%;
+    text-align: center;
+    font-family: 'Silverstone Sans', sans-serif;
+    color: white;
+    transition: all 2s;
+}
+
+.div-header h1:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: hwb(30 4% 0%);   
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+ }
+
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 2vw;
+
+
+}
+
+
+
+.foto-album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    flex-grow: 1;
+    transition: 0.6s all ease-in-out;
+
+}
+
+.foto-album:hover {
+    transform: scale(1.1);
+    filter: sepia(100%);
+
+}
+
+.foto-album {
+    padding: 1%;
+    width: 340px;
+    height: 340px;
+    filter: sepia(0%);
+    cursor: pointer;
+    
+}
+
+.titulo:hover {
+    background-color: rgb(0, 0, 0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: hwb(30 4% 0%);
+
+}
+@media screen and (min-width:320px) and (max-width:768px){
+ .divfooter{
+   display: inline-block;
+ }
+}
+</style>
+<body>
+   <header>
+      <div class="div-header">
+         <h1>Albúm de fotos de algumas metrópoles.</h1>
+      </div>
+   </header>
+
+   <div class="album">
+
+      <a href="https://images.wallpaperscraft.com/image/single/city_aerial_view_road_156925_3840x2160.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/city_aerial_view_road_156925_3840x2160.jpg"
+            alt="New York"></img>
+      </a>
+
+      <a href="https://portoimagem.files.wordpress.com/2021/08/drone4k-8.jpg?w=1200" class="foto-album">
+         <img src="https://portoimagem.files.wordpress.com/2021/08/drone4k-8.jpg?w=1200" alt="Porto Alegre"></img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/night_city_skyscrapers_tokyo_121233_1280x720.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/night_city_skyscrapers_tokyo_121233_1280x720.jpg"
+            alt="Tóquio">
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/los_angeles_night_view_from_above_58396_1280x720.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/los_angeles_night_view_from_above_58396_1280x720.jpg"
+            alt="Los Angeles">
+         </img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/san__francisco_cityscape_building_54925_1280x720.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/san__francisco_cityscape_building_54925_1280x720.jpg"
+            alt="San Francisco">
+         </img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/night_city_view_from_above_skyscrapers_122072_1280x720.jpg"
+         class="foto-album">
+         <img
+            src="https://images.wallpaperscraft.com/image/single/night_city_view_from_above_skyscrapers_122072_1280x720.jpg"
+            alt="Toronto"></img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/architecture_building_dusk_174412_1280x720.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/architecture_building_dusk_174412_1280x720.jpg"
+            alt="Sidney"></img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/beijing_skyscrapers_night_city_119221_1280x720.jpg"
+         class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/beijing_skyscrapers_night_city_119221_1280x720.jpg"
+            alt="Pequim"></img>
+      </a>
+
+      <a href="https://images.wallpaperscraft.com/image/single/london_england_uk_58120_1280x720.jpg" class="foto-album">
+         <img src="https://images.wallpaperscraft.com/image/single/london_england_uk_58120_1280x720.jpg" alt="Londres">
+         </img>
+      </a>
+
+   </div>
+   <footer>
+      <div class="divfooter">
+          <div class="coluna">
+              <h1>Outras Páginas</h1>
+              <li><a href="index.html">Página inicial</a></li>
+              <li><a href="tabuda.html">Tabuda</a></li>
+              <li><a href="relógio.html">Relógio</a></li>
+              <li><a href="signos.html">Signos</a></li>
+              <li><a href="flexgrid.html">Flex e grid</a></li>
+              <li><a href="carrossel.html">Carrossel</a></li>
+              <li><a href="main.html">Menu</a></li>
+              <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+            
+          </div>
+
+          <div class="coluna">
+              <h1>Outras Páginas</h1>
+              <li><a href="imc.html">IMC</a></li>
+              <li><a href="landingpage.html">Landing Page</a></li>
+              <li><a href="homepage.html">home page</a></li>
+              <li><a href="soma.html">Soma</a></li>
+              <li><a href="parallax.html">Parallax</a></li>
+          </div>
+          <div class="logo">
+              <h1 style="color: white; text-transform: uppercase;"><img
+                      src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                      alt="">Mateus</h1>
+              <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+              <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+              <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                      src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+              <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+          </div>
+      </div>
+      <br><br>
+      <div class="copy">
+          <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+      </div>
+  </footer>
+   </body>
+
+</html>

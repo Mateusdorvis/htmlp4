@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+
+    </script>
+    <title>fLEX E GRID</title>
+</head>
+<style>
+    @charset "utf-8";
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 1.3rem;
+        font-family: arial;
+        background-image: linear-gradient(180deg, #010937, #010553, #1c31a5);
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .main-header {
+        height: 55vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-header h1 span {
+        color: hsl(0, 0%, 100%);
+    }
+
+
+
+    .main-header p {
+        font-size: 2rem;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        overflow: auto;
+        padding: 0 2rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    h3 {
+        color: #ebf7f8;
+    }
+
+    p {
+        color: #ebf7f8;
+    }
+
+    h4 {
+        color: #ebf7f8;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        background: #00000068;
+        margin-bottom: 2rem;
+        border-radius: 50px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: black;
+        color: beige;
+        padding: 0.8rem 1.8rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    .card h1 {
+        margin-bottom: 2rem;
+    }
+
+
+
+    .card img {
+        height: 400px;
+        border-radius: 50px;
+    }
+
+    .card>div {
+        padding: 2rem;
+    }
+
+    .card:nth-child(even) img {
+        order: 2;
+    }
+
+
+    .btn:hover {
+        opacity: 50;
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+
+    .galeria {
+        display: flex;
+        height: 25rem;
+        gap: 1rem;
+        margin: 20px;
+    }
+
+
+    .galeria>div {
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        transition: all 1s cubic-bezier(1, 1, 1, 1);
+        border-radius: 50px;
+    }
+
+    .galeria>div:hover {
+        flex: 3;
+
+    }
+
+    .texto2 {
+
+        background-color: #00000097;
+        color: #ffffff;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 50px;
+
+
+    }
+
+
+    .texto1 {
+        color: #fffbf0;
+    }
+
+
+
+    h2 {
+        text-align: center;
+        font-family: 'PixelGameFont';
+        color: #ffffff;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+    }
+
+    h1 {
+        color: #ffffff
+    }
+
+
+    .cor {
+        color: #ffc801;
+    }
+
+    .logo {
+        color: #dedede;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .palavra {
+        font-size: 45%;
+    }
+
+
+    .letra {
+        color: aqua;
+
+    }
+
+    @font-face {
+        font-family: 'PixelGameFont';
+        src: url(PixelGameFont.ttf);
+    }
+
+
+    @font-face {
+        font-family: 'AnacticSC-Regular';
+        src: url(AmaticSC-Regular.ttf);
+    }
+
+    @media screen and (min-width:320px) and (max-width:480px){
+        body,
+        html {
+            width: 100vh;
+            height: 3000px;
+           background-color: #010937;
+        }
+
+        .main-header {
+            height: 200vh;
+        }
+
+        .card {
+            display: block;
+        }
+
+        .galeria {
+            display: flex;
+        }
+
+        .galeria p {
+            display: none;
+        }
+
+        .galeria div {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+    }
+    @media screen and (min-width:481px) and (max-width:768px){
+        .card{
+            display: inline-block;
+        }
+        .divfooter{
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-device-width:769px) and (max-device-width:1024px)and (min-device-height:1280px) and (max-device-height:1925px) and (orientation:landscape) {
+     
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body,
+            html {
+                background-color: #2a2344;
+                width: 100vw;
+                height: 100vh;
+            }
+    }
+</style>
+
+<body>
+
+
+    <header class="main-header">
+        <h1>4 Jogos ótimos jogos para<span> PlayStation<b class="palavra">&reg;</b>3. </span></h1>
+        <br>
+        <p class="texto1"> Playstation 3 foi um console da sétima geração problemático no seu lançamento, devido ao seu
+            preço,que era caro na época,mas mesmo assim o videogame fez sucesso por causa dos exclusivos, como também, o
+            console vendeu 89 milhões de unidades. </p>
+
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <img src="https://wallpapercave.com/wp/wp2922670.jpg" alt="Imagem do game Metal Gear Solid 4 ">
+            <div>
+                <h3>Metal Gear Solid 4 - Guns of Patriots (2008).</h3>
+                <p class="letra"> | <span class="logo">PS3&trade;</span></p>
+                <br>
+                <p>
+                    Metal Gear Solid 4 é a conclusão da história cronológica da saga Metal Gear,Por outro lado, o jogo
+                    melhorou a jogabilidade em comparação com os games anteriores, as Cutscenes chegam a 78 min, uma
+                    história emocionante que te prende na tela, além de levar o PlayStation 3 ao limite por seus
+                    belíssimos gráficos.</p>
+                <a href="#" class="btn">Baixar Imagem</a>
+
+            </div>
+        </section>
+
+        <section class="card" data-aos="fade-left">
+            <img src="https://wallpapercave.com/wp/wp2714492.jpg" alt=" Imagem do game GTA 4">
+            <div>
+                <h3> Grand Thef Auto 4 (2008)</h3>
+                <p class="letra"> | <span class="logo">PS3&trade;</span></p>
+                <br>
+                <p>
+                    O jogo conta a história de Niko Belic, um imigrante europeu que se mudou para a cidade de Liberty
+                    City em busca de uma vida fácil. Ao chegar na cidade, percebe que as coisas não são bem assim,
+                    obrigando Niko a se voltar para o crime, por outro lado, GTA 4 foi divisor de águas devido a sua
+                    física realista e por ter um clima bem melancólico e triste, apesar disto, o game foi aclamado pela
+                    crítica.
+                </p>
+                <a href="#" class="btn">Baixar Imagem</a>
+            </div>
+        </section>
+
+
+        <section class="card" data-aos="fade-left">
+            <img src="https://wallpapercave.com/uwp/uwp3331461.jpeg" alt=" Imagem do game The Last of Us">
+            <div>
+                <h3> The Last of Us (2013)</h3>
+                <p class="letra"> | <span class="logo">PS3&trade;</span></p>
+                <br>
+                <p>
+                    TLOU tem uma história emocionante e tem alguns momentos tensos, como também, os recursos são
+                    escassos, dificultando assim a jogabilidade, o game é considerado um dos melhores jogos de terror e
+                    sobrevivência,além disso,a história do jogo foca no relacionamento entre Joel e Ellie, que são
+                    sobreviventes de uma pandemia causada pelo fundo Cordyceps.
+                </p>
+                <a href="#" class="btn">Baixar Imagem</a>
+            </div>
+        </section>
+
+
+
+
+        <section class="card" data-aos="fade-right">
+            <img src="https://wallpapercave.com/wp/wp2614745.jpg" alt="Imagem do game Mortal Kombat">
+            <div>
+                <h4> Mortal Kombat ou Mortal Kombat 9 (2011)</h4>
+                <p class="letra"> | <span class="logo">PS3&trade;</span></p>
+                <br>
+                <p>
+                    Mortal Kombat 9 é o reboot da franquia originalmente criada em 1992. O jogo possui uma câmera 2D
+                    muito parecida com os jogos clássicos mas com modelagem 3D, o enredo fo game envolve o protetor
+                    divino da Terra, Raiden, tentando mudar as consequências dos eventos do Armagedom.
+
+                </p>
+                <a href="#" class="btn">Baixar Imagem</a>
+            </div>
+        </section>
+    </main>
+
+
+    <header clas="second-header">
+        <h2> MENÇÕES <b class="cor">HONROSAS </b></h2>
+    </header>
+
+    <div class="galeria">
+
+        <div style="background-image: url('https://wallpapercave.com/dwp1x/wp9490968.jpg');">
+            <p class="texto2"><b> Call of Duty 4 - Modern Warfare </b>(2007) | PS3&trade;
+            </p>
+        </div>
+
+        <div style="background-image: url('https://images6.alphacoders.com/458/458035.jpg');">
+            <p class="texto2"><b>Battlefield 4 </b> (2013) | PS3&trade; </p>
+        </div>
+
+        <div
+            style="background-image: url('https://w0.peakpx.com/wallpaper/22/841/HD-wallpaper-god-of-war-3-game-ps3.jpg')">
+            <p class="texto2"><b>God of War 3 </b>(2010) | PS3&trade; </p>
+        </div>
+
+        <div
+            style="background-image: url('https://w0.peakpx.com/wallpaper/275/249/HD-wallpaper-gta-5-grand-theft-auto.jpg');">
+            <p class="texto2"><b> Grand Theft Auto 5 </b>(2013) | PS3&trade; </p>
+        </div>
+
+        <div style="background-image: url('https://wallpapercave.com/wp/xu79pcx.png');">
+            <p class="texto2"><b>Portal 2 </b>(2009) | PS3&trade;</p>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+   <footer>
+    <div class="divfooter">
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="tabuda.html">Tabuda</a></li>
+            <li><a href="relógio.html">Relógio</a></li>
+            <li><a href="signos.html">Signos</a></li>
+            <li><a href="cronometro.html">Cronômetro</a></li>
+            <li><a href="carrossel.html">Carrossel</a></li>
+            <li><a href="main.html">Menu</a></li>
+            <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+          
+        </div>
+
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="imc.html">IMC</a></li>
+            <li><a href="landingpage.html">Landing Page</a></li>
+            <li><a href="homepage.html">home page</a></li>
+            <li><a href="cidade.html">álbum de fotos</a></li>
+            <li><a href="soma.html">Soma</a></li>
+            <li><a href="calculator.html">Calculadora</a></li>
+            <li><a href="parallax.html">Parallax</a></li>
+        </div>
+        <div class="logo">
+            <h1 style="color: white; text-transform: uppercase;"><img
+                    src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" style="width:44px; height:44px"
+                    alt="">Mateus</h1>
+            <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+            <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+            <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                    src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+            <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+        </div>
+    </div>
+    <br><br>
+    <div class="copy">
+        <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+    </div>
+</footer>
+</body>
+
+</html>

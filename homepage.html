@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+   
+    @font-face {
+        font-family: 'Northwell';
+        src: url(Northwell.ttf);
+    }
+    header{
+        transition: all 1s;
+        width: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.329);
+    }
+    header:hover{
+        background-color: white;
+
+    }
+    header h1{
+        font-family: 'Northwell';
+        font-weight: 900;
+        padding-top: 30px;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: red;
+        color: white;
+    }
+    body,html{
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .principal {
+        width: 100vw;
+    }
+
+    .section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .section1 {
+        background-color: black;
+        padding: 30px;
+    }
+
+    .icon img {
+        width: 200px;
+        margin: 10px;
+    }
+
+    .section1 img {
+        width: 500px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 40px;
+        background-color: yellowgreen;
+        border-radius: 30px;
+        color: black;
+        padding: 20px;
+        font-weight: 600;
+        transition: all 1s;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 6px;
+    }
+
+   .icon p {
+        text-align: justify;
+    }
+
+    .section1 div {
+        padding: 40px;
+    }
+
+    .btn:hover {
+        background-color: white;
+    }
+
+    .icon {
+        padding: 40px;
+        color: black;
+    }
+
+
+    @media screen and (max-width:768px) {
+
+        .section {
+            display: inline-block;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+        body,html{
+        background-image: linear-gradient(to right, #853c43, #f25c5e);
+     
+         }
+    }
+
+    @media screen and (min-width:320px) and (max-width:480px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+     body,html{
+        background-image: linear-gradient(to right, #853c43, #f25c5e);
+       overflow-x: hidden;
+         }
+     .icon{
+        color: white;
+     }
+     #celular{
+        background-color: white;
+        border-radius: 600px;
+        padding: 30px;
+     }
+    
+        .section {
+            display: inline-block;
+            width: 500px;
+            height: 600px;
+        }
+        .section1 h1{
+            margin-right: 100px;
+        }
+        .divfooter {
+            display: inline-block;
+        }
+        
+        footer{
+            margin-top: 40px;
+            width: 600px;
+        }
+        .copy{
+            display: none;
+        }
+    }
+    @media screen and (min-width:2560px)  and (max-width:4000px){
+        .section img{
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+<header>
+    <h1>CocaCola</h1>
+</header>
+    <main class="principal">
+        <section class="section section1">
+            <img src="beleza.png" alt="">
+            <div>
+                 <h1>Opa, abriu a geladeira e tá sem Coca? Não se preocupe! Peça seu produto Coca‑Cola no Na Sua Casa e receba suas bebidas favoritas no dia seguinte!</h1>
+                <br><br>
+                <a href="https://www.coca-cola.com.br/" class="btn">acessar</a>
+            </div>
+        </section>
+        <section class="section section2">
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/256/2688/2688584.png" alt="">
+                <p>50 bilhões de bebidas vendidas no mundo naquele ano, 1,3 bilhões pertenciam à marca Coca-Cola.</p>
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/256/44/44386.png" alt="">
+                <p>Vendida em mais de 200 países.</p>
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/256/1782/1782434.png" id="celular" alt="">
+                <p> Lucro líquido de US$ 3,11 bilhões no 1º trimestre de 2023.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="signos.html">Signos</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+              
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="landingpage.html">Landing Page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+                <li><a href="soma.html">Soma</a></li>
+                <li><a href="parallax.html">Parallax</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                        alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

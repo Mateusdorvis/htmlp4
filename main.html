@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página</title>
+</head>
+<style>
+   
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      background-size: cover;
+   }
+
+   @font-face {
+        font-family: 'BebasNeue-Regular';
+        src: url(BebasNeue-Regular.ttf);
+    }
+   body {
+      font-family: Arial, Helvetica, sans-serif;
+   }
+
+   h1 {
+      text-align: center;
+      text-transform: capitalize;
+      padding: 10px;
+   }
+
+   marquee {
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 900;
+      text-transform: capitalize;
+   }
+
+   .principal {
+      padding: 100px;
+   }
+
+   .image {
+      width: 200px;
+      height: 300px;
+      border-radius: 40px;
+      box-shadow: 5px 0 5px black;
+   }
+.image1{
+   background-image: url(cidade.png);
+}
+.image2{
+   background-image: url(carrossel.png);
+}
+.image3{
+   background-image: url(carrossel3d.png);
+}
+.image4{
+   background-image: url(parallax.png);
+}
+.image5{
+   background-image: url();
+}
+   .trabalho {
+      width: 200px;
+      height: 400px;
+      margin: 30px;
+      list-style: none;
+   }
+
+   .trabalho span {
+      font-size: 1rem;
+   }
+
+   .sessao1 {
+      padding: 30px;
+   }
+
+   .listas {
+      display: flex;
+      padding: 30px;
+      justify-content: center;
+   }
+
+   .navheader {
+      display: flex;
+      justify-content: center;
+   }
+
+   .navheader a {
+      padding: 30px;
+      color: black;
+      font-weight: 600;
+      transition: 1s all;
+   }
+
+   .navheader a:hover {
+      color: green;
+   }
+
+   header {
+      padding: 20px;
+      background-color: #e6dddcb7;
+      position: fixed;
+      width: 100%;
+   }
+
+   #busca {
+      border: 2px solid rgb(39, 165, 14);
+      border-radius: 50px;
+      width: 100%;
+      padding: 6px;
+   }
+
+   .imagens {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+      
+      width: 100%;
+   }
+
+   .card {
+      width: 200px;
+      height: 500px;
+      border-radius: 20px;
+      margin: 5px;
+      background-color: #000000;
+  
+}
+footer {
+    width: 120vw;
+    background-image: linear-gradient(45deg, #195e63, #3e838c, #063940, #8ebdb6);
+    font-family: 'BebasNeue-Regular';
+    padding: 70px;
+    top:0;
+    bottom: 0;
+    display: block;
+   
+}
+@font-face {
+        font-family: 'Northwell';
+        src: url(Northwell.ttf);
+    }
+footer h1{
+   font-family: 'BebasNeue-Regular';
+   color: white;
+   animation: muda 10s infinite;
+  
+}
+footer:hover{
+   background-image: linear-gradient(to right, #331327, #991766) ;
+} 
+@keyframes muda{
+    20%{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+     40%{
+      font-family: 'Northwell';
+     }
+     60%{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     }
+}
+
+
+     .dark-mode {
+      transition: 1s all;
+      background-color: #000000;
+      color: white;
+   }
+
+   .dark-mode .image {
+      border: solid 2px blue;
+   }
+
+   #toggle-mode {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+      background-color: #000000;
+      border: none;
+   }
+
+   .bar {
+      background-color: black;
+      width: 20px;
+      height: 4px;
+      margin: 4px;
+   }
+
+   .menu-hamburguer {
+      display: none;
+      cursor: pointer;
+
+   }
+
+   .menu {
+      display: flex;
+      list-style: none;
+
+   }
+
+   .imagens {
+      display: flex;
+      justify-content: center;
+   }
+
+   .navheader div {
+      margin: 10px;
+   }
+.inicio{
+ height: 100vh;
+  width: 100vw;
+  background-image: url(inicio.png);
+
+}
+   @media screen and (min-width:481px) and (max-width: 768px) {
+      header {
+         position: fixed;
+      }
+
+      .navheader {
+         display: block;
+      }
+
+      #busca {
+         width: 30%;
+      }
+
+      .listas {
+         display: inline;
+      }
+
+      .menu.active {
+         display: flex;
+      }
+
+      .menu-hamburguer {
+         display: block;
+         margin: 40px;
+      }
+
+      .menu {
+         display: none;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .menu li {
+         margin: 10px 0;
+      }
+      .imagens{
+         display: inline-block;
+      }
+      footer{
+         width: 120vw;
+      }
+      
+   }
+   @media screen and (min-width:320px) and (max-width: 480px) {
+      header {
+         position: fixed;
+      }
+
+      .navheader {
+         display: block;
+      }
+
+      #busca {
+         width: 30%;
+      }
+
+      .listas {
+         display: inline;
+      }
+
+      .menu.active {
+         display: flex;
+      }
+
+      .menu-hamburguer {
+         display: block;
+         margin: 40px;
+      }
+
+      .menu {
+         display: none;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .menu li {
+         margin: 10px 0;
+      }
+      .imagens{
+         display: inline-block;
+      }
+      footer{
+         width: 150vw;
+      }
+   }
+
+
+</style>
+
+<body>
+   <header>
+      <nav class="navheader">
+         <div class="menu-hamburguer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+         </div>
+         <ul class="menu">
+            <li><a href="#">contatos</a></li>
+            <li> <button type="button" id="toggle-mode"><img src="https://cdn-icons-png.flaticon.com/256/867/867904.png"
+                     width="30px" height="30px" alt=""></button></li>
+         </ul>
+         <div>
+            <input type="text" placeholder="buscar..." id="busca" name="busca" onkeydown="buscar()">
+         </div>
+      </nav>
+   </header>
+   <main class="principal">
+      <section class="sessao sessao1">
+         <h1>outros projetos.</h1>
+         <div class="imagens">
+            <a href="flexgrid.html">
+               <div class="card" style="background-image: url(https://cdn-icons-png.flaticon.com/256/5968/5968267.png); background-color: white; background-size: 100px; background-repeat: no-repeat; background-position: center;  border: 2px solid black;"><img src="https://cdn-icons-png.flaticon.com/256/5968/5968242.png" alt="" width="100px" height="100px" style="margin: 120px;"></div>
+            </a>
+            <a href="landingpage.html">
+               <div class="card" style="background-image: url(landingpage.png);"></div>
+            </a>
+            <a href="homepage.html">
+               <div class="card" style="background-image: url(homepage.png);"></div>
+            </a>
+            <a href="tabuada.html">
+               <div class="card" style="background-image: url(tabu.png);"></div>
+            </a>
+            <a href="signos.html">
+               <div class="card" style="background-image: url(Signos.png);"></div>
+            </a>
+
+         </div>
+         <ol class="listas">
+            <li class="trabalho"><a href="cidade.html">
+                  <div class="image image1"></div>
+               </a>
+               <marquee>albúm de fotos | <span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            <li class="trabalho"><a href="carrossel.html">
+                  <div class="image image2"></div>
+               </a>
+               <marquee> carrossel | <span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            <li class="trabalho"><a href="soma.html">
+               <div class="image" style="background-image: url(soma.png);"></div>
+            </a>
+            <marquee> soma |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+         </li>
+         </ol>
+         <ol class="listas">
+            <li class="trabalho"><a href="carrossel3d.html">
+                  <div class="image  image3"></div>
+               </a>
+               <marquee> carrossel 3d |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            <li class="trabalho"><a href="parallax.html">
+                  <div class="image image4"></div>
+               </a>
+               <marquee> parallax |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            
+      </section>
+      <a href="calculator.html">
+         <div class="inicio"></div>
+      </a>
+      <section class="sessao sessao2">
+         <ol class="listas">
+            <li class="trabalho"><a href="imc.html">
+                  <div class="image" style="background-image: url(imc.png);"></div>
+               </a>
+               <marquee> IMC |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            <li class="trabalho"><a href="relógio.html">
+                  <div class="image"  style="background-image: url(relogio.png);"></div>
+               </a>
+               <marquee> Relógio |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+            </li>
+            <li class="trabalho"><a href="cronometro.html">
+               <div class="image"  style="background-image: url(cronometro.png);"></div>
+            </a>
+            <marquee> Cronômetro |<span> este site foi desenvolvido por mateus dorvis&copy;.</span></marquee>
+         </li>
+      </section>
+   </main>
+   <script>
+      function buscar() {
+         let input = document.getElementById('busca').value
+         input = input.toLowerCase();
+         let x = document.getElementsByClassName('trabalho');
+
+         let dig = document.getElementById('busca');
+
+         dig.addEventListener('keydown', function (event) {
+            addRow(event);
+         });
+
+         for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+               x[i].style.display = "none";
+            }
+            else {
+               x[i].style.display = "list-item";
+            }
+         }
+      }
+
+
+      const toggleBtn = document.getElementById('toggle-mode');
+
+      const body = document.body;
+
+      toggleBtn.addEventListener('click', function () {
+         body.classList.toggle('dark-mode')
+      });
+
+      const menuhamburguer = document.querySelector('.menu-hamburguer');
+
+      const menu = document.querySelector('.menu');
+
+      menuhamburguer.addEventListener('click', () => {
+         menu.classList.toggle('active');
+      });
+   </script>
+   <footer>
+  <h1 >site desenvolvido por Mateus dorvis&reg;&copy;</h1>
+   </footer>
+</body>
+
+</html>

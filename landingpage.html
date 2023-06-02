@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    body,
+    html {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(to right, #65a675, #5d7e62);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.697);
+        color: white;
+        position: fixed;
+        padding: 10px;
+        transition: all 1s;
+    }
+    header:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .pai {
+        padding: 100px;
+   
+    }
+
+    .filhopai {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .filhopai div {
+        padding: 20px;
+    }
+.filhopai a{
+    width: 200px;
+    height: 100px;
+    border-radius: 200px;
+    padding: 30px;
+    text-transform: capitalize;
+    background-color: white;
+    color: #36802d;
+    font-weight: 600;
+    transition: all 1s;
+}
+.filhopai a:hover{
+    background-color: #234d20;
+    color: white;
+}
+    #grande {
+        width: 400px;
+        background-color: white;
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        border-top-right-radius: 100px;
+        border-bottom-left-radius: 200px;
+
+    }
+
+    h1 {
+        text-align: center;
+        padding: 4px;
+    }
+
+       @media screen and (min-width:481px) and (max-width:768px) {
+        header {
+            position: fixed;
+        }
+      
+        .divfooter,
+        .filhopai {
+
+            display: inline-block;
+            padding: 20px;
+        }
+    }
+
+    @media screen and (min-width: 320px) and (max-width:480px) {
+
+        body,
+        html {
+            width: 700px;
+            height: 500px;
+        }
+
+        header {
+            position: fixed;
+        }
+
+        .divfooter,
+        .filhopai {
+
+            display: inline-block;
+            padding: 20px;
+        }
+      
+    }
+
+    @media screen and (min-width:769px) and (max-width:1024px) {
+
+        body,
+        html {
+            width: 100vw;
+            height: 60vh;
+        }
+
+        header {
+            position: fixed;
+        }
+        .pai{
+            height: 100vh;
+        }
+    }
+
+    @media screen and (min-width:1025px) and (max-width:1200px) {
+        .filhopai {
+            height: 100vh;
+        }
+    }
+
+    @media screen and (min-width:1201px) and (max-width:2560px) {
+
+        .filhopai {
+            height: 100vh;
+            color: white;
+
+        }
+
+        #grande {
+            width: 40%;
+            height: 40%;
+            border-radius: 100%;
+        }
+    }
+    @media screen and (min-width:2560px) and (max-width:4000px) {
+
+.filhopai {
+    height: 100vh;
+    color: white;
+
+}
+
+#grande {
+    width: 50%;
+    height: 50%;
+     border-radius: 100%;
+}
+}
+</style>
+
+<body>
+    <header>
+        <h1>Jard<img src="https://cdn-icons-png.flaticon.com/256/188/188333.png" id="log" alt="">m.com</h1>
+        
+    </header>
+    <main class="pai">
+        <section class="filhopai">
+
+            <img src="https://cdn-icons-png.flaticon.com/256/4769/4769709.png" id="grande" alt="">
+            <div>
+                <h1 style="color:white;">Bem-vindo ao site Jardim.com, aqui você acessar algumas promoções de vasos de plantas,clique no botão abaixo para comprar plantas. </h1>
+                <br><br>
+               <a href="https://www.sitiodamata.com.br/especies-de-plantas/mudas-de-plantas/plantas-ornamentais">Clique aqui</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="signos.html">Signos</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+              
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="homepage.html">home page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+                <li><a href="soma.html">Soma</a></li>
+                <li><a href="parallax.html">Parallax</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                        alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

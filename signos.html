@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+<link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signos</title>
+</head>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/silverstone-sans');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+   body{
+   background-color: #f7a29e;
+   }
+    #frase {
+        padding:40px ;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #home{
+        width: 44px;
+        height: 44px;
+    }
+
+    #phoyo {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+    }
+    .zodiac{
+        padding: 70px;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+    @media screen and (min-device-width:320px)  and (max-device-width:480px) and (orientation: portrait){
+        section,.divfooter{
+            display: inline-block;
+        }
+        body{
+            background-color: black;
+        }
+        
+    }
+    @media screen and (min-device-width:481px) and (max-device-width:768px) and (orientation:portrait){
+        section,.divfooter{
+            display: inline-block;
+        }
+        body{
+            background: #f1c15d;
+        }
+    }
+    @media screen and (min-device-width:769px) and (max-device-width:1024px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .zodiac{
+            width: 100vw;
+            height: 90vh;
+        }
+    }
+    @media screen and (min-device-width:1201px) and (max-device-width:2560px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .zodiac{
+            width: 100vw;
+            height: 90vh;
+        }
+        #frase{
+            font-size: 2rem;
+        }
+    }
+    button{
+        background-color: #1c3166;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
+        
+    }
+</style>
+
+<body>
+
+    <div class="zodiac">
+        <h1 style="color: white; font-family: 'Silverstone Sans Round', sans-serif;">Signos</h1>
+
+        <input type="text" id="signos">
+        <button onclick="escolhaSigno()">buscar</button>
+        <section>
+            <img src="https://cdn-icons-png.flaticon.com/256/5928/5928453.png" id="phoyo" alt="">
+            <div id="frase"></div>
+        </section>
+    </div>
+    <script>
+        function escolhaSigno() {
+            var texto
+            var img = document.getElementById('phoyo');
+            var signo = document.querySelector("#signos").value
+            var body = document.querySelector('body');
+            document.body.style.backgroundSize = 'cover';
+
+            switch (signo) {
+
+                case "áries":
+                    texto = "O Signo de Áries é agitado e cheio de energia. Independente, não gosta muito de receber ordens e prefere fazer tudo do seu jeito. Adora praticar esportes, mexer o corpo, gastar energia. "
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/5928/5928566.png';
+                    document.body.style.backgroundColor = '#6a0e47';
+                    
+                    break //break é como um caso encerrado, ou seja o texto que fala do signo áries se encerrra aqui, se não colocasse break, o site iria exibir outros texto como do signo touro, gemeos e cancer
+
+                   
+
+                case "touro": //case (caso)
+                    texto = "O Signo de Touro costuma ser calmo, paciente, carinhoso, você é a tranquilidade em pessoa. Difícil alguém conseguir tirá-la do sério, mas também, quando consegue… Sai de baixo! Você demora a ficar brava, mas quando fica, é pra valer. Na maior parte do tempo, porém, é uma garota generosa, amigável e preocupada com as pessoas que ama. Além disso, possui uma grande sensibilidade, talentos artísticos e muito bom gosto. Pode ser um tanto possessiva, apegada às coisas e pessoas."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/7484/7484250.png';
+                    document.body.style.backgroundColor = '#6a0e47';
+                    break
+
+
+                case "gêmeos":
+                    texto = "O Signo de Gêmeos é alegre, curiosa, comunicativa, desencanada, você adora conhecer pessoas e conversar muito. Sempre conectada, sabe tudo o que está acontecendo e é sempre a garota mais informada."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/7366/7366979.png';
+                    document.body.style.backgroundColor = '#200e38';
+                    break
+
+                case "cancer":
+                    texto = "O Signo de Câncer é sensível, romântico, superligado à família, você tem um lado meigo e doce, mas também pode ser rancorosa e mau humorada. Tudo depende da Lua. Aparentemente, você é uma garota frági..."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/8062/8062736.png';
+                    document.body.style.backgroundColor = '#866a80';
+                    break
+
+                case "leão":
+                    texto = "O Signo de Leão é animado, cheio de vida, generoso e bem humorado. Sabe que nasceu para brilhar e brilha sem fazer o menor esforço, embora adore ser o centro das atenções."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/1960/1960021.png';
+                    document.body.style.backgroundColor = '#e4b302';
+                    break
+
+
+                case "virgem":
+                    texto = "O  Signo de Virgem é superinteligente. Você tem uma mente rápida e a capacidade de perceber os detalhes que ninguém mais percebe. Prestativa, está sempre pronta a ajudar e precisa se sentir útil."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/3201/3201849.png';
+                    document.body.style.backgroundColor = '#722731';
+                    break
+
+
+                case "libra":
+                    texto = "O Signo de Libra é charmoso, elegante e cheio de estilo, busca harmonia e equilíbrio em tudo o que faz. Simpática e preocupada com as pessoas, não suporta a ideia de ser injusta ou de magoar alguém."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/442/442803.png';
+                    document.body.style.backgroundColor = '#9fb982';
+                    break
+
+                case "escorpião":
+                    texto = "Com o Signo de Escorpião tudo é oito ou oitenta! Embora seja um tanto radical, você é uma garota sensível, inteligente, forte e também enigmática, misteriosa ..."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/2188/2188056.png';
+                    document.body.style.backgroundColor = '#e8608c';
+                    break
+
+
+                case "Sargitário":
+                    texto = "O Signo de Sagitário é sempre muito falante, animado, divertido e otimista, você tem um grande senso de humor e um forte espírito de liberdade. Autoconfiante, acredita que a sorte está ao seu lado ."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/47/47213.png';
+                    document.body.style.backgroundColor = '#006060';
+                    break
+
+                case "capricórnio":
+                    texto = "O Signo de Capricórnio é discreto e detesta chamar a atenção. Prefere ficar na sua, vive com simplicidade, e não curte muita agitação. Tímida e reservada, não é muito chegada a grandes baladas."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/3131/3131827.png';
+                    document.body.style.backgroundColor = '#f7a29e';
+                    break
+
+                case "aquário":
+                    texto = "O Signo de Aquário é revolucionário e sem preconceitos, você tem a mente aberta a novas ideias e está sempre disposta a aprender algo novo e diferente. Antenada com o futuro, com as novas tendências."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/1596/1596824.png';
+                    document.body.style.backgroundColor = 'gray';
+                    break
+
+                case "peixes":
+                    texto = "O Signo de Peixes é supersonhador, sensível, doce e simpático. Sempre disposta a ajudar, preocupa-se de verdade com as pessoas e tem um grande coração. Mística, espiritualizada, intuitiva e compreensiva."
+                    img.src = 'https://cdn-icons-png.flaticon.com/256/4191/4191509.png';
+                    document.body.style.backgroundColor = '#000000';
+                    break
+
+
+                default:
+                    texto = "Insira um signo existente"
+            }
+
+
+
+            document.getElementById('frase').innerHTML = texto
+
+        };
+
+    </script>
+     <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+              
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="landingpage.html">Landing Page</a></li>
+                <li><a href="homepage.html">home page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+                <li><a href="soma.html">Soma</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" id="home"
+                        alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::calculadora::</title>
+</head>
+<style>
+    @charset "utf-8";
+
+
+    body {
+        background-image: url(https://images3.alphacoders.com/186/186987.jpg);
+        margin: 0;
+        background-size: cover;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        color: #ffffffea;
+        align-items: center;
+        height: 100vh;
+        font-family: 'BebasNeue-Regular';
+
+    }
+
+
+    #calculator {
+        max-width: 360px;
+        background-color: #292c37;
+        border-radius: 13px;
+        padding: 20px;
+        box-shadow: 0 10px 20px #000000;
+    }
+
+    #display {
+        width: 100%;
+        height: 45px;
+        font-size: 20px;
+        text-align: right;
+        margin-bottom: 10px;
+        padding: 25px;
+        border-radius: 3px;
+        color: black;
+        background: #7a907c;
+        border: none;
+        box-sizing: border-box;
+        font-weight: 600;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .equal {
+        width: calc(50% - 10px);
+    }
+
+    button {
+        width: calc(25% - 10px);
+        height: 50px;
+        font-size: 20px;
+        margin: 10px 5px;
+        /*referente a cada botão*/
+        border: none;
+        float: right;
+        /*alinhar os elementos a esquerda*/
+        background-color: #85827e;
+        color: white;
+        border-radius: 50px;
+        box-shadow: -1px 1px 10px black;
+        /*deslocamento da sombra a esquerda*/
+    }
+
+
+    #ac {
+        background: #f4324a;
+        color: bisque;
+
+    }
+
+    #de {
+        background: #f4324a;
+    }
+
+
+    .operator {
+        color: #eaeaea;
+        background: #3b8c88;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: orange;
+        color: beige;
+    }
+
+    button:active {
+        transform: scale(0.9);
+        box-shadow: none;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    @font-face {
+        font-family: 'BebasNeue-Regular';
+        src: url(BebasNeue-Regular.ttf);
+    }
+
+    @media screen and (min-device-width:320px) and (max-device-width:480px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+
+        #calculator {
+            height: 200vw;
+
+        }
+    }
+
+    @media screen and (min-width:481px) and (max-width:768px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .divfooter {
+            display: inline-block;
+        }
+
+        #calculator {
+            height: 100vw;
+
+        }
+    }
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        #calculator {
+            height: 100vw;
+        }
+    }
+
+        @media screen and (min-width:1025px) and (max-width:1200px) {
+            #calculator {
+                height: 50vw;
+
+            }
+        }
+
+        @media screen and (min-width:1201px) and (max-width:4000px) {
+            .divmain {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #calculator {
+                width: 200vw;
+            }
+        }
+</style>
+
+<body>
+    <header>
+        <h1> Calculadora </h1>
+    </header>
+    <main class="divmain">
+        <div id="calculator">
+            <input type="text" id="display" disabled>
+            <br>
+            <button id="ac" class="operator"> AC</button>
+            <button id="de" class="operator"> BKSP</button>
+            <button id="." class="operator"> . </button>
+            <button id="/" class="operator"> /</button>
+            <br>
+
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="*" class="operator"> X</button>
+            <br>
+
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="-" class="operator"> -</button>
+            <br>
+
+            <button id="3">3</button>
+            <button id="2">2</button>
+            <button id="1">1</button>
+            <button id="+" class="operator"> +</button>
+            <br>
+
+            <button id="00">00</button>
+            <button id="0">0</button>
+            <button id="=" class="operator equal"> =</button>
+            <br>
+
+        </div>
+    </main>
+    <footer>
+        <div class="divfooter">
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="tabuda.html">Tabuda</a></li>
+                <li><a href="relógio.html">Relógio</a></li>
+                <li><a href="signos.html">Signos</a></li>
+                <li><a href="flexgrid.html">Flex e grid</a></li>
+                <li><a href="carrossel.html">Carrossel</a></li>
+                <li><a href="main.html">Menu</a></li>
+                <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+              
+            </div>
+
+            <div class="coluna">
+                <h1>Outras Páginas</h1>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="landingpage.html">Landing Page</a></li>
+                <li><a href="homepage.html">home page</a></li>
+                <li><a href="cidade.html">álbum de fotos</a></li>
+                <li><a href="soma.html">Soma</a></li>
+                <li><a href="parallax.html">Parallax</a></li>
+            </div>
+            <div class="logo">
+                <h1 style="color: white; text-transform: uppercase;"><img
+                        src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                        alt="">Mateus</h1>
+                <a href="https://www.instagram.com/m146677/"><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+                <a href="https://www.linkedin.com/in/mateus-dorvis-703a6b1b4/mail.google.com"><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+                <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+                <a href="https://github.com/Mateusdorvis"><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+            </div>
+        </div>
+        <br><br>
+        <div class="copy">
+            <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+        </div>
+    </footer>
+    <script>
+
+
+
+        const display = document.querySelector("#display");//sempre utilizar letra maiúscula//  //constante é mesma coisa ue variavel, só que não pode mudar o valor da constante durante o código//   //o querySelector retorna o primeiro elemento dentro do documento//
+        const buttons = document.querySelectorAll("button");//Retorna uma lista de elementos presentes no documento//
+
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+
+                if (btn.id === "=") {
+                    display.value = eval(display.value);
+                } else if (btn.id === "ac") {
+                    display.value = "";
+                } else if (btn.id === "de") {
+                    display.value = display.value.slice(0, -1);
+                } else {
+                    display.value += btn.id;
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/806/806133.png">
+    <link rel="stylesheet" href="geral.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuda</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to right, #ff5100, blue);
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        margin: 0;
+        margin: 0;
+    }
+
+    header {
+        background-color: #f3f4e5;
+        display: flex;
+        padding: 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 5px;
+    }
+
+    .tabuada {
+        padding: 10%;
+    }
+
+    .dark-mode {
+        background: #000000;
+        color: white;
+    }
+
+    #image {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: #b0c65a;
+    }
+
+    #image:hover {
+        background-image: linear-gradient(180deg, #1ea49d, #027fe9);
+    }
+
+    table {
+        padding: 20px;
+    }
+
+    kbd {
+        font-weight: 600;
+    }
+
+    .tabuada p {
+        font-size: 1.9rem;
+    }
+
+    .dark-mode header {
+        background-color: #0d0f06;
+        color: white;
+    }
+
+    #toggle-mode {
+        background: #050000;
+        color: white;
+        border-radius: 10px;
+        padding: 3px;
+        height: 50px;
+        font-weight: 600;
+        transition: all 0.9s;
+    }
+
+    #toggle-mode:hover {
+        background-color: #454545;
+        color: #b3c67f;
+        transition: all 0.9s;
+        border-style: none;
+    }
+
+    .midias img {
+        width: 50px;
+        height: 50px;
+    }
+    @media screen and (max-width:768px){
+        .tabuada,.divfooter{
+            display: inline-block;
+        }
+        
+    }
+   
+</style>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="tabuada.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabuada</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Tabela<img src="https://cdn-icons-png.flaticon.com/512/2106/2106584.png" id="image" alt=""></h1>
+            <button id="toggle-mode">Modo escuro</button>
+        </header>
+        <div class="tabuada">
+            <p>Digite um valor para gerar uma <kbd>tabuada</kbd>.</p>
+            <input type="text" name="number" id="number">
+            <button onclick="gerarTabuada()">Gerar</button>
+            <table id="tabela-tabuada"></table>
+        </div>
+
+<script>
+    alert('Wellcome :) ')
+
+var img = document.getElementById('image')
+
+const toggleBtn = document.getElementById('toggle-mode')
+
+const body = document.body
+
+
+
+toggleBtn.addEventListener('click', function () {
+    body.classList.toggle('dark-mode')
+    img.src = 'https://cdn-icons-png.flaticon.com/512/2117/2117709.png'
+})
+
+function gerarTabuada() {
+
+    var numero = parseInt(document.getElementById('number').value); //transformar em número inteiro graças ao parseInt
+
+    var tabela = document.getElementById('tabela-tabuada');
+
+    tabela.innerHTML = ""; //limpar a tabela antes de gerar outra
+  
+    img.src = 'https://cdn-icons-png.flaticon.com/512/3276/3276051.png'
+
+    //gerar a tabuada
+
+    for (var i = 1; i <= 100; i++) {
+        var resultado = numero * i;
+        var linha = "<tr><td>" + numero + "X" + i + "</td><td>" + resultado + "</td></tr>";//tr é tabela
+
+        tabela.innerHTML += linha
+
+    }
+
+    tabela.style.backgroundColor = 'white'
+    tabela.style.marginTop = '20px'
+      tabela.style.color = 'black'
+
+
+}
+</script>
+<footer>
+    <div class="divfooter">
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="tabuda.html">Tabuda</a></li>
+            <li><a href="regiões.html">Regiões</a></li>
+            <li><a href="signos.html">Signos</a></li>
+            <li><a href="cronometro.html">cronometro</a></li>
+            <li><a href="flexgrid.html">Flex e grid</a></li>
+            <li><a href="carrosssel.html">Carrossel</a></li>
+            <li><a href="main.html">Menu</a></li>
+            <li><a href="carrossel3d.html">Carrossel 3D</a></li>
+            <li><a href="imc.html">IMC</a></li>
+        </div>
+
+        <div class="coluna">
+            <h1>Outras Páginas</h1>
+            <li><a href="cidade.html">álbum de fotos</a></li>
+            <li><a href="soma.html">Soma</a></li>
+            <li><a href="calculator.html">Calculadora</a></li>
+            <li><a href="parallax.html">Parallax</a></li>
+        </div>
+        <div class="logo">
+            <h1 style="color: white; text-transform: uppercase;"><img
+                    src="https://cdn-icons-png.flaticon.com/256/5819/5819387.png" width="40px" height="40px"
+                    alt="">Mateus</h1>
+            <a href=""><img src="https://cdn-icons-png.flaticon.com/256/2111/2111463.png" id="log" alt=""></a>
+            <a href=""><img src="https://cdn-icons-png.flaticon.com/256/3536/3536505.png" id="log" alt=""></a>
+            <a href=""><img style="background-color: white; border-radius: 40px; padding: 5px;"
+                    src="https://cdn-icons-png.flaticon.com/256/5968/5968534.png" id="log" alt=""></a>
+            <a href=""><img src="https://cdn-icons-png.flaticon.com/256/733/733609.png" id="log" alt=""></a>
+        </div>
+    </div>
+    <br><br>
+    <div class="copy">
+        <p> Site desenvolvido por Mateus Dorvis 2023&reg;.</p>
+    </div>
+</footer>
+    </body>
+
+    </html>
